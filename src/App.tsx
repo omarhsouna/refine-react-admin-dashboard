@@ -11,7 +11,7 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { dataProvider, liveProvider } from "./providers";
+import { dataProvider, liveProvider, authProvider } from "./providers";
 function App() {
   return (
     <BrowserRouter>
@@ -24,7 +24,7 @@ function App() {
               liveProvider={liveProvider}
               notificationProvider={useNotificationProvider}
               routerProvider={routerBindings}
-              // authProvider={}
+              authProvider={authProvider}
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
